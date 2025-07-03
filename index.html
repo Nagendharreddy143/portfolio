@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagender Reddy - Cybersecurity & AI Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon" href="logo.png" type="image/png">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-dark-bg text-dark-text overflow-x-hidden">
+    <!-- Particle Background -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 floating-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center h-full">
+                    <img src="logo.png" alt="Nagender Reddy Logo" class="h-10 w-auto mr-2" style="object-fit:contain;" />
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-dark-subtle hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#projects" class="text-dark-subtle hover:text-primary transition-colors duration-300">Projects</a>
+                    <a href="#about" class="text-dark-subtle hover:text-primary transition-colors duration-300">About</a>
+                    <a href="#contact" class="text-dark-subtle hover:text-primary transition-colors duration-300">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-dark-subtle hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-16 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6">
+                        NAGENDER <span class="gradient-text">REDDY</span>
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl text-primary font-semibold mb-4">
+                        FULL STACK DEVELOPER
+                    </h2>
+                    <p class="text-xl text-dark-subtle mb-6">
+                        Full Stack Developer with a strong foundation in Java, JavaScript, React Native, and SQL. Passionate about building scalable web and mobile applications from frontend to backend.
+                    </p>
+                    
+                    <div class="flex space-x-4">
+                        <a href="resume.pdf" target="_blank" rel="noopener" class="btn-primary px-8 py-3 rounded-lg font-semibold inline-block">
+                            Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center slide-in-right">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-primary to-secondary rounded-3xl transform rotate-6 absolute glow"></div>
+                        <div class="w-80 h-80 bg-dark-card rounded-3xl shadow-2xl overflow-hidden relative z-10">
+                            <img src="img.jpg" 
+                                 alt="Nagender Reddy" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- My Work Section -->
+    <section id="projects" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in">
+                MY <span class="gradient-text">WORK</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl shadow-lg overflow-hidden scale-in">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">Mitigating DDoS Attacks in IoT</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-dark-subtle mb-4">
+                            Designed firewall and rate-limit strategies for IoT devices to block DDoS attack vectors using Python.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-900 text-blue-300 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-900 text-purple-300 text-sm rounded-full">Cybersecurity</span>
+                            <span class="px-3 py-1 bg-green-900 text-green-300 text-sm rounded-full">IoT</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl shadow-lg overflow-hidden scale-in">
+                    <div class="h-48 bg-gradient-to-br from-green-700 to-teal-800 relative">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">Crypto Price analysis with AI</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-dark-subtle mb-4">
+                            Used LSTM + ANN models to forecast Bitcoin and Ethereum trends in volatile markets.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-900 text-blue-300 text-sm rounded-full">Python</span>
+                            <span class="px-3 py-1 bg-purple-900 text-purple-300 text-sm rounded-full">Deep Learning</span>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl shadow-lg overflow-hidden scale-in">
+                    <div class="h-48 bg-gradient-to-br from-red-800 to-pink-900 relative">
+                        <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+                            <h3 class="text-white text-xl font-bold">News App with AI (Internship)</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-dark-subtle mb-4">
+                            Built an AI-powered mobile news app using React Native + Python backend for aspirants.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-900 text-blue-300 text-sm rounded-full">React Native</span>
+                            <span class="px-3 py-1 bg-yellow-900 text-yellow-300 text-sm rounded-full">Java</span>
+                            <span class="px-3 py-1 bg-purple-900 text-purple-300 text-sm rounded-full">AI</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in">
+                Skills  <span class="gradient-text">& Technologies</span>
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-orange-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-java text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">Java</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-orange-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-html5 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">HTML5</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-css3 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">CSS3</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-js text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">JavaScript</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">Cybersecurity</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-react text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">React</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-react native text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-semibold">React Native</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">GitHub</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-database text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">SQL</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-blue-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-brands fa-figma text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">Figma</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-green-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">VSCode</h3>
+                </div>
+                <div class="tech-card p-6 rounded-xl shadow-lg text-center">
+                    <div class="w-12 h-12 bg-purple-900 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold">AI </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in">
+                ABOUT <span class="gradient-text">ME</span>
+            </h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-purple-900 to-pink-900 rounded-3xl transform -rotate-6 absolute opacity-20"></div>
+                        <div class="w-80 h-80 bg-gradient-to-br from-purple-800 to-pink-800 rounded-3xl shadow-2xl overflow-hidden relative z-10">
+                            <img src="img.jpg" 
+                                 alt="About Nagender" 
+                                 class="w-full h-full object-cover rounded-3xl">
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-in-right">
+                    <h3 class="text-3xl font-bold mb-6">Why I Do What I Do</h3>
+                    <p class="text-lg text-dark-subtle mb-6">
+                        Hi, I'm Nagender — a passionate Java Full Stack Developer with a solid foundation in building end-to-end software systems.</span>
+                        I recently graduated with a Bachelor's in Computer Science and Engineering, and I've already built impactful projects that span IoT security, AI-based market prediction, and responsive web applications.
+                    </p>
+                    <p class="text-lg text-dark-subtle mb-6">
+                        My mission? <span class="text-primary font-semibold">Combine the power of AI with SOFTWARE DEVELOPMENT</span> to secure the future. I believe in creating tools that not only solve problems but anticipate them.
+                    </p>
+                    <div class="bg-gradient-to-r from-purple-900 to-pink-900 p-6 rounded-xl border-l-4 border-primary mb-8">
+                        <p class="text-lg italic text-dark-text">
+                            "From logic to layout, I build digital experiences with curiosity and clarity."
+                        </p> 
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-primary mb-2"><i class="fa-solid fa-graduation-cap mr-2"></i>Education</h4>
+                            <p class="text-dark-subtle">B.Tech in Cybersecurity</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary mb-2"><i class="fa-solid fa-briefcase mr-2"></i>Experience</h4>
+                            <p class="text-dark-subtle">Internship in AI Development</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary mb-2"><i class="fa-solid fa-bullseye mr-2"></i>Interests</h4>
+                            <p class="text-dark-subtle">UI/UX design, AI Research</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16 fade-in">
+                GET IN <span class="gradient-text">TOUCH</span>
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8 fade-in">
+                <a href="mailto:reddynagender942@gmail.com" class="floating-card">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <div>
+                        <div class="label">Email</div>
+                        <div class="Email">reddynagender942@gmail.com</div>
+                    </div>
+                </a>
+                <div class="floating-card">
+                    <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                    <div>
+                        <div class="label">Phone</div>
+                        <div class="value">+91 9014780547</div>
+                    </div>
+                </div>
+                
+                <a href="https://github.com/Nagendharreddy143" target="_blank" class="floating-card">
+                    <span class="icon"><i class="fa-brands fa-github"></i></span>
+                    <div>
+                        <div class="label">GitHub</div>
+                        <div class="link">github.com/Nagendharreddy143</div>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/nagender-reddy1406" target="_blank" class="floating-card">
+                    <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+                    <div>
+                        <div class="label">LinkedIn</div>
+                        <div class="link">linkedin.com/in/nagender-reddy1406</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark-card text-dark-subtle py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>all rights reserved. © 2025 Nagender Reddy</p>
+        </div>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>

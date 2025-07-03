@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #18181b;
+            color: #e5e7eb;
+        }
+        
+        .particle {
+            position: absolute;
+            background: linear-gradient(45deg, #8B5CF6, #A855F7);
+            border-radius: 50%;
+            opacity: 0.25;
+            animation: float 6s ease-in-out infinite;
+            filter: blur(1px);
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.6s ease-out;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .glow {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+        
+        .tech-card, .project-card {
+            background: #232336;
+            color: #e5e7eb;
+            border: 1px solid #2d2d3a;
+        }
+        
+        .tech-card:hover, .project-card:hover {
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #8B5CF6, #A855F7, #EC4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .floating-nav {
+            background: rgba(24, 24, 27, 0.95);
+            border: 1px solid #2d2d3a;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #8B5CF6, #A855F7);
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+        }
+        
+        .floating-card {
+            background: rgba(35, 35, 54, 0.35);
+            color: #e5e7eb;
+            border: 1px solid #2d2d3a;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            transition: transform 0.4s cubic-bezier(.4,2,.6,1), box-shadow 0.4s, background 0.3s;
+            animation: floatCard 3s ease-in-out infinite;
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-radius: 1.25rem;
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            min-width: 260px;
+            min-height: 90px;
+        }
+        
+        .floating-card:hover {
+            transform: translateY(-10px) scale(1.04);
+            box-shadow: 0 16px 40px rgba(139, 92, 246, 0.25);
+            background: rgba(60, 40, 90, 0.45);
+        }
+        
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        
+        .floating-card .icon {
+            font-size: 2.2rem;
+            color: #8B5CF6;
+            min-width: 2.5rem;
+            text-align: center;
+        }
+        
+        .floating-card .label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #e5e7eb;
+        }
+        
+        .floating-card .value, .floating-card .link {
+            color: #a1a1aa;
+            font-size: 1rem;
+            font-weight: 500;
+            word-break: break-all;
+        }
+        
+        .floating-card .link {
+            color: #8B5CF6;
+            text-decoration: underline;
+        }
+        
+        /* Update input fields for dark mode */
+        input, textarea {
+            background: #18181b;
+            color: #e5e7eb;
+            border: 1px solid #2d2d3a;
+        }
+        
+        input:focus, textarea:focus {
+            border-color: #8B5CF6;
+            outline: none;
+        }
