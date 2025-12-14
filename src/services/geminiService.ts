@@ -1,10 +1,5 @@
-import { GoogleGenAI } from "@google/genai";
-
-// Initialize the client.
-// Note: In a production environment, API calls should be proxied through a backend 
-// to protect the API key. For this demo, we assume the environment variable is available.
-const apiKey = 'AIzaSyCe5xve0ot6-NvMAmmyDwGMjqDlld_sbZQ';
-const ai = new GoogleGenAI({ apiKey });
+// Simplified Gemini API using REST endpoint
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 const SYSTEM_INSTRUCTION = `
 You are Nani AI, an AI assistant for Nagendhar's portfolio website. 
@@ -22,15 +17,34 @@ export const chatWithAgent = async (message: string): Promise<string> => {
   }
 
   try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: message,
-      config: {
-        systemInstruction: SYSTEM_INSTRUCTION,
+    // Use REST API directly with correct model name
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemma-3-1b-it:generateContent?key=${apiKey}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: SYSTEM_INSTRUCTION + '\n\nUser: ' + message
+            }]
+          }]
+        })
       }
-    });
+    );
 
-    return response.text || "I'm having trouble thinking right now.";
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error("Gemini API Error:", errorData);
+      return "Sorry, I couldn't connect to the AI service. Please try again.";
+    }
+
+    const data = await response.json();
+    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+    return text || "I'm having trouble thinking right now.";
   } catch (error) {
     console.error("Gemini API Error:", error);
     return "Sorry, I couldn't connect to the AI service at the moment.";
