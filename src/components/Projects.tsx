@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SectionId, Project } from '../types';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const projects: Project[] = [
@@ -155,7 +155,11 @@ const Projects: React.FC = () => {
                         className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full hover:bg-[#FF3B3B] hover:text-white transition-colors duration-300"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <Github size={16} />
+                        {project.github.includes('linkedin.com') ? (
+                          <Linkedin size={16} />
+                        ) : (
+                          <Github size={16} />
+                        )}
                         <span className="text-sm font-bold">
                           {project.github.includes('github.com')
                             ? 'View on GitHub'
@@ -260,7 +264,11 @@ const Projects: React.FC = () => {
                     className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-full hover:bg-[#FF3B3B] hover:text-white transition-colors duration-300 text-xs font-bold"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    <Github size={14} />
+                    {project.github.includes('linkedin.com') ? (
+                      <Linkedin size={14} />
+                    ) : (
+                      <Github size={14} />
+                    )}
                     {project.github.includes('github.com')
                       ? 'GitHub'
                       : project.github.includes('linkedin.com')

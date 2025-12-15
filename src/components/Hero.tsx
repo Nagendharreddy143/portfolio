@@ -1,7 +1,7 @@
 import React from 'react';
 import { SectionId } from '../types';
 import { Linkedin, Github, Instagram, ArrowDown } from 'lucide-react';
-import nagendharPortrait from '../assets/bw-removebg-preview.png';
+import nagendharPortrait from '../assets/bw-removebg-preview .png';
 
 const skills = [
   "React Native", "Java Spring Boot", "TypeScript", "Microservices",
